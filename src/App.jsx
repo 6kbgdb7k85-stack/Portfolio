@@ -22,7 +22,10 @@ function App() {
           Nathan Baggs
         </Typography>
       </AppBar>
-      <Grid container spacing={1}>
+      <Grid
+        container
+        spacing={1}
+      >
         <Grid size={{ xs: 12, md: 4 }}>
           <HeadlineCard />
         </Grid>
@@ -30,13 +33,17 @@ function App() {
           <AboutCard />
         </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
-          <ResumeCard />
+          <Grid container spacing={1}>
+            <Grid size={6}>
+              <ResumeCard />
+            </Grid>
+            <Grid size={6}>
+              <ContactCard />
+            </Grid>
+          </Grid>
         </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <ExpertiseCard />
-        </Grid>
-        <Grid size={{ xs: 12, md: 4 }}>
-          <ContactCard />
         </Grid>
       </Grid>
     </Container>
