@@ -1,15 +1,12 @@
 import {
-  Box,
   Button,
   Card,
   CardActions,
   CardContent,
   CardHeader,
   Collapse,
-  IconButton,
   Typography,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 
 export default function AboutCard() {
