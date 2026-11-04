@@ -1,6 +1,5 @@
 import { AppBar, Container, Grid, Typography, useTheme } from "@mui/material";
 import AboutCard from "./components/AboutCard";
-import Projects from "./components/Projects";
 import HeadlineCard from "./components/HeadlineCard";
 import ResumeCard from "./components/ResumeCard";
 import ExpertiseCard from "./components/ExpertiseCard";
