@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, Chip, Grid } from "@mui/material";
-import { SKILL_LIST } from "../common/constants";
+import { SKILL_LIST } from "../../common/constants";
 
 export default function ExpertiseCard() {
   return (
@@ -8,8 +8,8 @@ export default function ExpertiseCard() {
       <CardContent>
         <Grid container spacing={1}>
           {SKILL_LIST.map((skill) => (
-            <Grid size={"auto"}>
-              <Chip label={skill} variant="filled" />
+            <Grid key={skill} size={"auto"}>
+              <Chip color="primary" label={skill} variant="filled" />
             </Grid>
           ))}
         </Grid>
