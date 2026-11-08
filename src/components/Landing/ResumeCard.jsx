@@ -1,6 +1,6 @@
 import { Description } from "@mui/icons-material";
 import { Card, CardContent, CardHeader, IconButton } from "@mui/material";
-import downloadFile from "../common/utils/downloadFile";
+import downloadFile from "../../common/utils/downloadFile";
 
 export default function ResumeCard() {
 
