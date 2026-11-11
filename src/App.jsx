@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Box,
   Button,
   Container,
   Grid,
@@ -34,7 +35,11 @@ function App() {
     >
       <AppBar position="static" sx={{ mb: "2rem" }}>
         <Toolbar>
-          <IconButton size="large" color="inherit" onClick={() => navigate("/")}>
+          <IconButton
+            size="large"
+            color="inherit"
+            onClick={() => navigate("/")}
+          >
             <Home />
           </IconButton>
           <Typography variant="h2" sx={{ textAlign: "center", flexGrow: 1 }}>
@@ -60,7 +65,9 @@ function App() {
           </Button>
         </Stack>
       </AppBar>
-      <Outlet />
+      <Box sx={{pl:"1rem",pr:"1rem"}}>
+        <Outlet />
+      </Box>
     </Container>
   );
 }

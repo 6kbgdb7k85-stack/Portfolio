@@ -5,10 +5,12 @@ import ResumeCard from "./ResumeCard";
 import AboutCard from "./AboutCard";
 import ExpertiseCard from "./ExpertiseCard";
 import HeadlineCard from "./HeadlineCard";
+import getTopProjects from "../../common/utils/getTopProjects";
+import ProjectCard from "./ProjectCard";
 
 export default function LandingComponent() {
   return (
-    <Grid container spacing={1} sx={{ pl: "1rem",pr:"1rem" }}>
+    <Grid container spacing={1}>
       <Grid size={{ xs: 6, md: 4 }}>
         <HeadlineCard />
       </Grid>
@@ -17,12 +19,16 @@ export default function LandingComponent() {
       </Grid>
       <Grid size={{ xs: 12, md: 4 }}>
         <Stack spacing={1}>
-            <ResumeCard/>
-            <ContactCard/>
-            <ExpertiseCard/>
+          <ResumeCard />
+          <ContactCard />
+          <ExpertiseCard />
         </Stack>
       </Grid>
-      <Projects />
+      {getTopProjects().map((project) => (
+        <Grid size={{ xs: 12, md: 4 }}>
+          <ProjectCard project={project} />
+        </Grid>
+      ))}
     </Grid>
   );
 }
