@@ -1,4 +1,11 @@
-import { GitHub, Home, LinkedIn, Phone } from "@mui/icons-material";
+import {
+  Email,
+  GitHub,
+  Home,
+  LinkedIn,
+  Phone,
+  Place,
+} from "@mui/icons-material";
 import {
   Card,
   CardContent,
@@ -8,7 +15,7 @@ import {
   Typography,
 } from "@mui/material";
 import handleLinkClick from "../../common/utils/handleLinkClick";
-import { GITHUB_URL, LINKEDIN_URL } from "../../common/constants";
+import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "../../common/constants";
 
 export default function ContactCard() {
   return (
@@ -16,24 +23,36 @@ export default function ContactCard() {
       <CardHeader title="Contact" />
       <CardContent>
         <Stack direction={"row"}>
-            <Phone/>
-            <Typography variant="body1">(804) 687-5911</Typography>
+          <Phone />
+          <Typography variant="body1">(804) 687-5911</Typography>
         </Stack>
         <Stack direction={"row"}>
-          <Home />
-          <Typography variant="body1">4108 LaCrema Dr Charlotte, NC</Typography>
+          < Place/>
+          <Typography variant="body1">Charlotte, NC</Typography>
         </Stack>
-        <IconButton
+        <Stack direction={"row"}>
+          <IconButton
             color="primary"
-          sx={{ mr: "1rem" }}
-          size="large"
-          onClick={() => handleLinkClick(GITHUB_URL)}
-        >
-          <GitHub />
-        </IconButton>
-        <IconButton color="primary" size="large" onClick={() => handleLinkClick(LINKEDIN_URL)}>
-          <LinkedIn />
-        </IconButton>
+            size="large"
+            onClick={() => handleLinkClick(GITHUB_URL)}
+          >
+            <GitHub />
+          </IconButton>
+          <IconButton
+            color="primary"
+            size="large"
+            onClick={() => handleLinkClick(LINKEDIN_URL)}
+          >
+            <LinkedIn />
+          </IconButton>
+          <IconButton
+            color="primary"
+            size="large"
+            onClick={() => handleLinkClick(`mailto: ${EMAIL}`)}
+          >
+            <Email />
+          </IconButton>
+        </Stack>
       </CardContent>
     </Card>
   );

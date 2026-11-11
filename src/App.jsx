@@ -51,9 +51,6 @@ function App() {
           <Button color="inherit" onClick={() => navigate("about")}>
             About
           </Button>
-          <Button color="inherit" onClick={() => navigate("contact")}>
-            Contact
-          </Button>
           <Button color="inherit" onClick={() => navigate("projects")}>
             Portfolio
           </Button>
