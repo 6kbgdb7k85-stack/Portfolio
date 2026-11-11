@@ -11,7 +11,8 @@ export const PROJECTS = [
       "City-based weather app in React featuring current weather conditions and a five-day forecast using OpenMeteo API.",
     stack: ["React","Javascript","Material UI"],
     link: "https://quickweather-t6eq.onrender.com",
-    github: "https://github.com/6kbgdb7k85-stack/QuickWeather"
+    github: "https://github.com/6kbgdb7k85-stack/QuickWeather",
+    top:1
   },
   {
     name:'DIY Tracker',
@@ -19,7 +20,8 @@ export const PROJECTS = [
     stack:["React","Javascript","Flask","Python","SQLAlchemy","Marshmallow","PostgreSQL"],
     link:"https://diy-tracker-6llk.onrender.com",
     github:"https://github.com/6kbgdb7k85-stack/DIY-Tracker",
-    demoCreds:{username:'demo',password:"demopass"}
+    demoCreds:{username:'demo',password:"demopass"},
+    top:2
   },
   {
     name:'Global Cookbook',
@@ -27,6 +29,7 @@ export const PROJECTS = [
     stack:["React","Javascript","Flask","Python","SQLAlchemy","Marshmallow","PostgreSQL"],
     link:"https://global-cookbook.onrender.com/",
     github:"Github: https://github.com/6kbgdb7k85-stack/Global-Cookbook",
-    demoCreds:{username:"demo",password:"demopass1234!@A"}
+    demoCreds:{username:"demo@demo.com",password:"demopass1234!@A"},
+    top:3
   }
 ];
