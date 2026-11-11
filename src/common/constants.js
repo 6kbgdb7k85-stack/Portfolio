@@ -52,7 +52,7 @@ export const PROJECTS = [
       "PostgreSQL",
     ],
     link: "https://global-cookbook.onrender.com/",
-    github: "Github: https://github.com/6kbgdb7k85-stack/Global-Cookbook",
+    github: "https://github.com/6kbgdb7k85-stack/Global-Cookbook",
     demoCreds: { username: "demo@demo.com", password: "demopass1234!@A" },
     top: 3,
   },
