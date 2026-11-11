@@ -15,17 +15,20 @@ export default function LandingComponent() {
         <HeadlineCard />
       </Grid>
       <Grid size={{ xs: 6, md: 4 }}>
-        <AboutCard />
+        <Stack spacing={1}>
+          <AboutCard />
+          <ResumeCard />
+        </Stack>
       </Grid>
       <Grid size={{ xs: 12, md: 4 }}>
         <Stack spacing={1}>
-          <ResumeCard />
+          
           <ContactCard />
           <ExpertiseCard />
         </Stack>
       </Grid>
-      {getTopProjects().map((project) => (
-        <Grid size={{ xs: 12, md: 4 }}>
+      {getTopProjects().map((project,index) => (
+        <Grid key={`project-${index+1}`} size={{ xs: 12, md: 4 }}>
           <ProjectCard project={project} />
         </Grid>
       ))}

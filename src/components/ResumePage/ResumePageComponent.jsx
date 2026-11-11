@@ -1,5 +1,5 @@
 import { Download } from "@mui/icons-material";
-import { IconButton, Link, Stack, Typography } from "@mui/material";
+import { IconButton, Link, Stack, Toolbar, Typography } from "@mui/material";
 import ResumeHeaderComponent from "./ResumeHeaderComponent";
 import downloadFile from "../../common/utils/downloadFile";
 import { EMAIL, RESUME_NAME, RESUME_PATH } from "../../common/constants";
@@ -7,23 +7,24 @@ import { EMAIL, RESUME_NAME, RESUME_PATH } from "../../common/constants";
 export default function ResumePageComponent() {
   return (
     <>
-      <Stack sx={{ position: "static" }}>
-        <IconButton color="inherit"
+      <Toolbar>
+        <Typography variant="h3" align="center" sx={{flexGrow:1}}>
+          NATHAN A. BAGGS
+        </Typography>
+        <IconButton
+          color="inherit"
           sx={{ ml: "auto" }}
           onClick={() => downloadFile(RESUME_PATH, RESUME_NAME)}
         >
           <Download />
         </IconButton>
-      </Stack>
-
-      <Typography variant="h3" align="center">
-        NATHAN A. BAGGS
-      </Typography>
+      </Toolbar>
       <Typography variant="h5" align="center" color="secondary">
         SENIOR SOFTWARE ENGINEER | FULL-STACK DEVELOPMENT
       </Typography>
       <Typography variant="body1" align="center">
-        (804) 687-5911 | <Link href={`mailto: ${EMAIL}`}>{EMAIL}</Link> | Charlotte, NC 28214 |{" "}
+        (804) 687-5911 | <Link href={`mailto: ${EMAIL}`}>{EMAIL}</Link> |
+        Charlotte, NC 28214 |{" "}
         <Link href="https://www.linkedin.com/in/nathanbaggs/" target="_blank">
           linkedin.com/in/nathanbaggs
         </Link>
@@ -129,8 +130,16 @@ export default function ResumePageComponent() {
         </li>
         <li style={{ listStyle: "none" }}>
           <Typography variant="body1">
-            <Link href="https://quickweather-t6eq.onrender.com" target="_blank">Live demo</Link> |{" "}
-            <Link href="https://github.com/6kbgdb7k85-stack/QuickWeather" target="_blank">Github</Link>
+            <Link href="https://quickweather-t6eq.onrender.com" target="_blank">
+              Live demo
+            </Link>{" "}
+            |{" "}
+            <Link
+              href="https://github.com/6kbgdb7k85-stack/QuickWeather"
+              target="_blank"
+            >
+              Github
+            </Link>
           </Typography>
         </li>
       </ul>
@@ -146,8 +155,16 @@ export default function ResumePageComponent() {
         </li>
         <li style={{ listStyle: "none" }}>
           <Typography variant="body1">
-            <Link href="https://diy-tracker-6llk.onrender.com" target="_blank">Live demo</Link> |{" "}
-            <Link href="https://github.com/6kbgdb7k85-stack/DIY-Tracker" target="_blank">Github</Link>
+            <Link href="https://diy-tracker-6llk.onrender.com" target="_blank">
+              Live demo
+            </Link>{" "}
+            |{" "}
+            <Link
+              href="https://github.com/6kbgdb7k85-stack/DIY-Tracker"
+              target="_blank"
+            >
+              Github
+            </Link>
           </Typography>
         </li>
       </ul>
@@ -163,8 +180,16 @@ export default function ResumePageComponent() {
         </li>
         <li style={{ listStyle: "none" }}>
           <Typography variant="body1">
-            <Link href="https://global-cookbook.onrender.com" target="_blank">Live demo</Link> |{" "}
-            <Link href="https://github.com/6kbgdb7k85-stack/Global-Cookbook" target="_blank">Github</Link>
+            <Link href="https://global-cookbook.onrender.com" target="_blank">
+              Live demo
+            </Link>{" "}
+            |{" "}
+            <Link
+              href="https://github.com/6kbgdb7k85-stack/Global-Cookbook"
+              target="_blank"
+            >
+              Github
+            </Link>
           </Typography>
         </li>
       </ul>
