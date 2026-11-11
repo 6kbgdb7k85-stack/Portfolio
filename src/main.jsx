@@ -10,7 +10,7 @@ import AboutPageComponent from "./components/AboutPageComponent.jsx";
 import ContactPageComponent from "./components/ContactPageComponent.jsx";
 import SkillsPageComponent from "./components/SkillsPageComponent.jsx";
 import Projects from "./components/Landing/Projects.jsx";
-import ResumePageComponent from "./components/ResumePageComponent.jsx";
+import ResumePageComponent from "./components/ResumePage/ResumePageComponent.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
