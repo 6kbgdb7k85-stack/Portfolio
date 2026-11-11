@@ -11,7 +11,8 @@ export default function HeadlineCard(){
                 title="Nathan image"
             />
             <CardContent>
-                <Typography variant="body1">Senior Software Engineer</Typography>
+                <Typography variant="h6" sx={{fontWeight:"bolder"}}>Senior Software Engineer</Typography>
+                <Typography variant="h6" sx={{fontWeight:"bolder"}}>Full Stack Development</Typography>
             </CardContent>
         </Card>
     )
