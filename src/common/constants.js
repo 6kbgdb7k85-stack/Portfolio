@@ -1,12 +1,16 @@
+import resume from "/src/assets/Nathan_Baggs_Resume.pdf";
+
 export const SKILL_LIST = ["Javascript", "React", "Python", "Flask"];
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/nathanbaggs/";
 
 export const GITHUB_URL = "https://github.com/6kbgdb7k85-stack";
 
-export const RESUME_NAME = "Nathan Baggs Resume.pdf"
+export const RESUME_NAME = "Nathan Baggs Resume.pdf";
 
-export const EMAIL = "nathan.baggs91@gmail.com"
+export const RESUME = resume;
+
+export const EMAIL = "nathan.baggs91@gmail.com";
 
 export const PROJECTS = [
   {
