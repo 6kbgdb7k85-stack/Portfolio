@@ -2,7 +2,7 @@ import { Download } from "@mui/icons-material";
 import { IconButton, Link, Stack, Toolbar, Typography } from "@mui/material";
 import ResumeHeaderComponent from "./ResumeHeaderComponent";
 import downloadFile from "../../common/utils/downloadFile";
-import { EMAIL, RESUME_NAME, RESUME_PATH } from "../../common/constants";
+import { EMAIL, RESUME, RESUME_NAME } from "../../common/constants";
 
 export default function ResumePageComponent() {
   return (
@@ -14,7 +14,7 @@ export default function ResumePageComponent() {
         <IconButton
           color="inherit"
           sx={{ ml: "auto" }}
-          onClick={() => downloadFile(RESUME_PATH, RESUME_NAME)}
+          onClick={() => downloadFile(RESUME, RESUME_NAME)}
         >
           <Download />
         </IconButton>
