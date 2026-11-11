@@ -1,4 +1,5 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import image from '/src/assets/self-with-delorean.jpeg'
 
 export default function HeadlineCard(){
 
@@ -7,7 +8,7 @@ export default function HeadlineCard(){
             <CardMedia
                 component={"img"}
                 sx={{height:"15rem", objectPosition:"50% 50%"}}
-                image="src/assets/self-with-delorean.jpeg"
+                image={image}
                 title="Nathan image"
             />
             <CardContent>
