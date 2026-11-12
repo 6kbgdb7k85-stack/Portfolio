@@ -4,7 +4,7 @@ import image from '/src/assets/self-with-delorean.jpeg'
 export default function HeadlineCard(){
 
     return (
-        <Card>
+        <Card sx={{height:"100%"}}>
             <CardMedia
                 component={"img"}
                 sx={{height:"15rem", objectPosition:"50% 50%"}}

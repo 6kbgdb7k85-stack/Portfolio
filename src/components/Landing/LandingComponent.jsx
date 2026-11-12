@@ -21,7 +21,7 @@ export default function LandingComponent() {
         </Stack>
       </Grid>
       <Grid size={{ xs: 12, md: 4 }}>
-        <Stack spacing={1}>
+        <Stack spacing={1} sx={{height:"100%"}}>
           
           <ContactCard />
           <ExpertiseCard />
