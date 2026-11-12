@@ -12,6 +12,18 @@ export const RESUME = resume;
 
 export const EMAIL = "nathan.baggs91@gmail.com";
 
+//true is frontend false is backend
+export const SKILLS_MAP = {
+  REACT: true,
+  JAVASCRIPT: true,
+  MATERIAL_UI:true,
+  FLASK:false,
+  PYTHON:false,
+  SQLALCHEMY:false,
+  MARSHMALLOW:false,
+  POSTGRESQL:false
+}
+
 export const PROJECTS = [
   {
     name: "QuickWeather",
