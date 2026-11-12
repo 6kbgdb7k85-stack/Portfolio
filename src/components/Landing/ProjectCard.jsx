@@ -6,22 +6,44 @@ import {
   CardActions,
   CardContent,
   CardHeader,
+  Grid,
   IconButton,
   List,
   ListItem,
   ListItemText,
   Stack,
+  Table,
+  TableCell,
+  TableHead,
+  TableRow,
   Typography,
 } from "@mui/material";
 import handleLinkClick from "../../common/utils/handleLinkClick";
+import classifySkills from "../../common/utils/classifySkills";
 
 export default function ProjectCard({ project }) {
   const { name, description, stack, link, github, demoCreds } = project;
+  const { frontend, backend } = classifySkills(stack);
+  const skillGroups = [
+    { title: "Frontend", skills: frontend },
+    { title: "Backend", skills: backend },
+  ].filter((group) => group.skills.length > 0);
   return (
-    <Card sx={{height:"100%", display:"flex", flexDirection:"column"}}>
-      <CardActionArea onClick={() => handleLinkClick(link)} sx={{flexGrow:1, display:"flex", flexDirection:"column", alignItems:"stretch"}}>
-        <CardHeader title={name} sx={{borderBottom:"1px solid black", pb:".5rem", pt:".5rem"}}/>
-        <CardContent sx={{pt:".5rem", flexGrow:1}}>
+    <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+      <CardActionArea
+        onClick={() => handleLinkClick(link)}
+        sx={{
+          flexGrow: 1,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "stretch",
+        }}
+      >
+        <CardHeader
+          title={name}
+          sx={{ borderBottom: "1px solid black", pb: ".5rem", pt: ".5rem" }}
+        />
+        <CardContent sx={{ pt: ".5rem", flexGrow: 1 }}>
           <Typography variant="body1">{description}</Typography>
           {demoCreds && (
             <Typography variant="body2" sx={{ textIndent: "2rem" }}>
@@ -29,14 +51,47 @@ export default function ProjectCard({ project }) {
               footer.
             </Typography>
           )}
-          <Typography variant="h6">Stack</Typography>
-          <ul>
-            {stack.map((item) => (
-              <li key={`${name}-skill-${item}`}>
-                <Typography>{item}</Typography>
-              </li>
+          <Typography variant="h6" align="center">
+            Stack
+          </Typography>
+          <Grid
+          container
+          sx={{ border: "1px solid black" }}
+          >
+            {skillGroups.map(({ title, skills }, index) => (
+              <Grid
+                key={title}
+                size={12 / skillGroups.length}
+                sx={{ display: "flex" }}
+              >
+                <Stack
+                  sx={{
+                    borderRight:
+                      index < skillGroups.length - 1 ? "1px solid black" : "",
+                    flexGrow: 1,
+                  }}
+                >
+                  <Typography
+                    variant="body1"
+                    align="center"
+                    sx={{
+                      fontWeight: "bold",
+                      borderBottom: "1px solid black",
+                    }}
+                  >
+                    {title}
+                  </Typography>
+                  <ul>
+                    {skills.map((skill) => (
+                      <li key={skill}>
+                        <Typography variant="body1">{skill}</Typography>
+                      </li>
+                    ))}
+                  </ul>
+                </Stack>
+              </Grid>
             ))}
-          </ul>
+          </Grid>
         </CardContent>
       </CardActionArea>
       <CardActions>
