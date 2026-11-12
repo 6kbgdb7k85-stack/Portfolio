@@ -33,7 +33,7 @@ function App() {
         padding: "0 !important",
       }}
     >
-      <AppBar position="static" sx={{ mb: "2rem" }}>
+      <AppBar position="static" sx={{ mb: "1rem" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -62,7 +62,7 @@ function App() {
           </Button>
         </Stack>
       </AppBar>
-      <Box sx={{pl:"1rem",pr:"1rem"}}>
+      <Box sx={{ pl: "1rem", pr: "1rem"}}>
         <Outlet />
       </Box>
     </Container>

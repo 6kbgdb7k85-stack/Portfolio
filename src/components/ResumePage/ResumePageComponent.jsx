@@ -8,9 +8,9 @@ export default function ResumePageComponent() {
   return (
     <>
       <Toolbar>
-        <Typography variant="h3" align="center" sx={{flexGrow:1}}>
-          NATHAN A. BAGGS
-        </Typography>
+        <Typography variant="h5" align="center" color="secondary" sx={{flexGrow:1}}>
+        SENIOR SOFTWARE ENGINEER | FULL-STACK DEVELOPMENT
+      </Typography>
         <IconButton
           color="inherit"
           sx={{ ml: "auto" }}
@@ -19,9 +19,7 @@ export default function ResumePageComponent() {
           <Download />
         </IconButton>
       </Toolbar>
-      <Typography variant="h5" align="center" color="secondary">
-        SENIOR SOFTWARE ENGINEER | FULL-STACK DEVELOPMENT
-      </Typography>
+      
       <Typography variant="body1" align="center">
         (804) 687-5911 | <Link href={`mailto: ${EMAIL}`}>{EMAIL}</Link> |
         Charlotte, NC 28214 |{" "}

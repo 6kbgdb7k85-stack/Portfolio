@@ -3,7 +3,7 @@ import { SKILL_LIST } from "../../common/constants";
 
 export default function ExpertiseCard() {
   return (
-    <Card>
+    <Card sx={{flex:1}}>
       <CardHeader title="Skills" />
       <CardContent>
         <Grid container spacing={1}>
