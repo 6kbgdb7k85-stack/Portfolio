@@ -18,10 +18,10 @@ import handleLinkClick from "../../common/utils/handleLinkClick";
 export default function ProjectCard({ project }) {
   const { name, description, stack, link, github, demoCreds } = project;
   return (
-    <Card>
-      <CardActionArea onClick={() => handleLinkClick(link)}>
+    <Card sx={{height:"100%", display:"flex", flexDirection:"column"}}>
+      <CardActionArea onClick={() => handleLinkClick(link)} sx={{flexGrow:1, display:"flex", flexDirection:"column", alignItems:"stretch"}}>
         <CardHeader title={name} sx={{borderBottom:"1px solid black", pb:".5rem", pt:".5rem"}}/>
-        <CardContent sx={{pt:".5rem"}}>
+        <CardContent sx={{pt:".5rem", flexGrow:1}}>
           <Typography variant="body1">{description}</Typography>
           {demoCreds && (
             <Typography variant="body2" sx={{ textIndent: "2rem" }}>
