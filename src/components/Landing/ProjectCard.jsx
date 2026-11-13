@@ -41,7 +41,7 @@ export default function ProjectCard({ project }) {
       >
         <CardHeader
           title={name}
-          sx={{ borderBottom: "1px solid black", pb: ".5rem", pt: ".5rem" }}
+          sx={{ pb: ".5rem", pt: ".5rem" }}
         />
         <CardContent sx={{ pt: ".5rem", flexGrow: 1 }}>
           <Typography variant="body1">{description}</Typography>
@@ -56,7 +56,6 @@ export default function ProjectCard({ project }) {
           </Typography>
           <Grid
           container
-          sx={{ border: "1px solid black" }}
           >
             {skillGroups.map(({ title, skills }, index) => (
               <Grid
@@ -66,21 +65,18 @@ export default function ProjectCard({ project }) {
               >
                 <Stack
                   sx={{
-                    borderRight:
-                      index < skillGroups.length - 1 ? "1px solid black" : "",
                     flexGrow: 1,
                   }}
                 >
-                  <Typography
+                  {skillGroups.length>1&&(<Typography
                     variant="body1"
                     align="center"
                     sx={{
                       fontWeight: "bold",
-                      borderBottom: "1px solid black",
                     }}
                   >
-                    {title}
-                  </Typography>
+                    <u>{title}</u>
+                  </Typography>)}
                   <ul>
                     {skills.map((skill) => (
                       <li key={skill}>
