@@ -1,4 +1,4 @@
-import { Grid, Stack } from "@mui/material";
+import { Box, Grid, Stack } from "@mui/material";
 import Projects from "./Projects";
 import ContactCard from "./ContactCard";
 import ResumeCard from "./ResumeCard";
@@ -10,28 +10,30 @@ import ProjectCard from "./ProjectCard";
 
 export default function LandingComponent() {
   return (
+    <Stack spacing={1}>
+    <Box className="landing-layout">
+    <Box className="landing-headline">
+      <HeadlineCard />
+    </Box>
+
+    <Box className="landing-stack landing-about">
+      <AboutCard />
+      <ResumeCard />
+    </Box>
+
+    <Box className="landing-stack landing-contact">
+      <ContactCard />
+      <ExpertiseCard />
+    </Box>
+  </Box>
     <Grid container spacing={1}>
-      <Grid size={{ xs: 6, md: 4 }}>
-        <HeadlineCard />
-      </Grid>
-      <Grid size={{ xs: 6, md: 4 }}>
-        <Stack spacing={1}>
-          <AboutCard />
-          <ResumeCard />
-        </Stack>
-      </Grid>
-      <Grid size={{ xs: 12, md: 4 }}>
-        <Stack spacing={1} sx={{height:"100%"}}>
-          
-          <ContactCard />
-          <ExpertiseCard />
-        </Stack>
-      </Grid>
+      
       {getTopProjects().map((project,index) => (
         <Grid key={`project-${index+1}`} size={{ xs: 12, md: 4 }}>
           <ProjectCard project={project} />
         </Grid>
       ))}
     </Grid>
+    </Stack>
   );
 }

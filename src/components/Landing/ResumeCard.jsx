@@ -6,7 +6,7 @@ import { RESUME, RESUME_NAME } from "../../common/constants";
 export default function ResumeCard() {
 
   return (
-    <Card>
+    <Card sx={{ flex: 1, minHeight: 0 }}>
       <CardHeader title="Resume" />
       <CardContent>
         <IconButton color="inherit" size="large" onClick={()=>downloadFile(RESUME,RESUME_NAME)}>
