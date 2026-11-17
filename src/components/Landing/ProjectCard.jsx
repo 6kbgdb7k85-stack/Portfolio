@@ -39,10 +39,7 @@ export default function ProjectCard({ project }) {
           alignItems: "stretch",
         }}
       >
-        <CardHeader
-          title={name}
-          sx={{ pb: ".5rem", pt: ".5rem" }}
-        />
+        <CardHeader title={name} sx={{ pb: ".5rem", pt: ".5rem" }} />
         <CardContent sx={{ pt: ".5rem", flexGrow: 1 }}>
           <Typography variant="body1">{description}</Typography>
           {demoCreds && (
@@ -54,9 +51,7 @@ export default function ProjectCard({ project }) {
           <Typography variant="h6" align="center">
             Stack
           </Typography>
-          <Grid
-          container
-          >
+          <Grid container>
             {skillGroups.map(({ title, skills }, index) => (
               <Grid
                 key={title}
@@ -68,15 +63,18 @@ export default function ProjectCard({ project }) {
                     flexGrow: 1,
                   }}
                 >
-                  {skillGroups.length>1&&(<Typography
-                    variant="body1"
-                    align="center"
-                    sx={{
-                      fontWeight: "bold",
-                    }}
-                  >
-                    <u>{title}</u>
-                  </Typography>)}
+                  {skillGroups.length > 1 && (
+                    <Typography
+                      variant="body1"
+                      align="center"
+                      sx={{
+                        fontWeight: "bold",
+                        borderBottom: "1px solid black",
+                      }}
+                    >
+                      {title}
+                    </Typography>
+                  )}
                   <ul>
                     {skills.map((skill) => (
                       <li key={skill}>
@@ -90,6 +88,7 @@ export default function ProjectCard({ project }) {
           </Grid>
         </CardContent>
       </CardActionArea>
+        {demoCreds&&<Typography variant="body2" sx={{pl:"8px",pr:"8px", fontFamily:"Goldman"}}>Username: {demoCreds.username} | Password: {demoCreds.password}</Typography>}
       <CardActions>
         <Button
           onClick={() => handleLinkClick(github)}
@@ -105,16 +104,6 @@ export default function ProjectCard({ project }) {
         >
           Live
         </Button>
-        {demoCreds && (
-          <Stack>
-            <Typography variant="body2">
-              Username: {demoCreds.username}
-            </Typography>
-            <Typography variant="body2">
-              Password: {demoCreds.password}
-            </Typography>
-          </Stack>
-        )}
       </CardActions>
     </Card>
   );

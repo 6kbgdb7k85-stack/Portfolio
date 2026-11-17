@@ -19,15 +19,15 @@ import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "../../common/constants";
 
 export default function ContactCard() {
   return (
-    <Card>
+    <Card sx={{ flex: 1, minHeight: 0 }}>
       <CardHeader title="Contact" />
       <CardContent>
         <Stack direction={"row"}>
-          <Phone />
+          <Phone fontSize="small"/>
           <Typography variant="body1">(804) 687-5911</Typography>
         </Stack>
         <Stack direction={"row"}>
-          < Place/>
+          < Place fontSize="small"/>
           <Typography variant="body1">Charlotte, NC</Typography>
         </Stack>
         <Stack direction={"row"}>
