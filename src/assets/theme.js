@@ -17,7 +17,7 @@ const themeOptions = {
     },
   },
   typography: {
-    fontFamily: "Bruno Ace",
+    fontFamily: '"Goldman At", "Bruno Ace"',
   },
 };
 
