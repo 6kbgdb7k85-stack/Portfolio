@@ -31,11 +31,11 @@ function App() {
         backgroundColor: palette.background.default,
         height: "100dvh",
         padding: "0 !important",
-        display:"flex",
-        flexDirection:"column"
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <AppBar position="static" sx={{ pt:"1rem" }}>
+      <AppBar position="static" sx={{ pt: "1rem" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -44,9 +44,17 @@ function App() {
           >
             <Home />
           </IconButton>
-          <Typography variant="h2" sx={{ textAlign: "center", flexGrow: 1 }}>
+          <Box sx={{flexGrow:1, textAlign:"center"}}>
+            <Typography
+            variant="h2"
+            component={"span"}
+            sx={{ ":hover": { cursor: "pointer" } }}
+            onClick={() => navigate("/")}
+          >
             Nathan Baggs
           </Typography>
+          </Box>
+          
         </Toolbar>
 
         <Stack direction={"row"} sx={{ ml: "auto", mr: "1rem" }}>
@@ -64,11 +72,17 @@ function App() {
           </Button>
         </Stack>
       </AppBar>
-      <Box sx={{ padding:'.5rem', overflow:"scroll", flexGrow:1}}>
+      <Box sx={{ padding: ".5rem", overflow: "scroll", flexGrow: 1 }}>
         <Outlet />
       </Box>
-      <Box sx={{width:"100%",backgroundColor: palette.primary.main}}>
-        <Typography align="center" variant="h6" sx={{color:palette.primary.contrastText}}>&copy; 2026 Nathan Baggs</Typography>
+      <Box sx={{ width: "100%", backgroundColor: palette.primary.main }}>
+        <Typography
+          align="center"
+          variant="h6"
+          sx={{ color: palette.primary.contrastText }}
+        >
+          &copy; 2026 Nathan Baggs
+        </Typography>
       </Box>
     </Container>
   );
