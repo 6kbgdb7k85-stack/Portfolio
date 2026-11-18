@@ -39,7 +39,7 @@ export default function ResumePageComponent() {
       </Typography>
       <ResumeHeaderComponent title={"TECHNICAL SKILLS"} />
       <Typography variant="body1">
-        <strong>Languages:</strong> JavaScript, TypeScript, Python, SQL
+        <strong style={{fontSize:18}}>Languages:</strong> JavaScript, TypeScript, Python, SQL
       </Typography>
       <Typography variant="body1">
         <strong>Frontend:</strong> React.js, Angular, HTML5, CSS3, Material UI

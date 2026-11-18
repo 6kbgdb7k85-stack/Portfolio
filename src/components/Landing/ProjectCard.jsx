@@ -88,7 +88,11 @@ export default function ProjectCard({ project }) {
           </Grid>
         </CardContent>
       </CardActionArea>
-        {demoCreds&&<Typography variant="body2" sx={{pl:"8px",pr:"8px", fontFamily:"Goldman"}}>Username: {demoCreds.username} | Password: {demoCreds.password}</Typography>}
+      {demoCreds && (
+        <Typography variant="body2" sx={{ pl: "8px", pr: "8px" }}>
+          Username: {demoCreds.username} | Password: {demoCreds.password}
+        </Typography>
+      )}
       <CardActions>
         <Button
           onClick={() => handleLinkClick(github)}

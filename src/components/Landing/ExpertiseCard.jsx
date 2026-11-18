@@ -3,9 +3,9 @@ import { SKILL_LIST } from "../../common/constants";
 
 export default function ExpertiseCard() {
   return (
-    <Card sx={{ flex: 1, minHeight: 0 }}w>
+    <Card>
       <CardHeader title="Skills" />
-      <CardContent>
+      <CardContent sx={{padding:"8px !important"}}>
         <Grid container spacing={1}>
           {SKILL_LIST.map((skill) => (
             <Grid key={skill} size={"auto"}>

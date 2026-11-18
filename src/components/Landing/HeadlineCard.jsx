@@ -20,10 +20,10 @@ export default function HeadlineCard() {
           pt:"0 !important"
         }}
       >
-        <Typography variant="h6" sx={{ fontWeight: "bolder" }}>
+        <Typography variant="h5" sx={{ fontWeight: "bold" }}>
           Senior Software Engineer
         </Typography>
-        <Typography variant="h6" sx={{ fontWeight: "bolder" }}>
+        <Typography variant="h5" sx={{ fontWeight: "bold" }}>
           Full Stack Development
         </Typography>
       </CardContent>

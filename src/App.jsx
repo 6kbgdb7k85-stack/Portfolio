@@ -29,8 +29,10 @@ function App() {
       maxWidth={false}
       sx={{
         backgroundColor: palette.background.default,
-        minHeight: "100dvh",
+        height: "100dvh",
         padding: "0 !important",
+        display:"flex",
+        flexDirection:"column"
       }}
     >
       <AppBar position="static" sx={{ pt:"1rem" }}>
@@ -62,8 +64,11 @@ function App() {
           </Button>
         </Stack>
       </AppBar>
-      <Box sx={{ pl: ".5rem", pr: ".5rem", pt:'.5rem'}}>
+      <Box sx={{ padding:'.5rem', overflow:"scroll", flexGrow:1}}>
         <Outlet />
+      </Box>
+      <Box sx={{width:"100%",backgroundColor: palette.primary.main}}>
+        <Typography align="center" variant="h6" sx={{color:palette.primary.contrastText}}>&copy; 2026 Nathan Baggs</Typography>
       </Box>
     </Container>
   );
