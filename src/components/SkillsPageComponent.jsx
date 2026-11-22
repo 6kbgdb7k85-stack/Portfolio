@@ -11,7 +11,7 @@ export default function SkillsPageComponent(){
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid size={4}>
+            <Grid size={{xs:12,sm:4}}>
                 <Card>
                     <CardHeader title={"Frontend"}/>
                     <CardContent>
@@ -26,7 +26,7 @@ export default function SkillsPageComponent(){
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid size={4}>
+            <Grid size={{xs:12,sm:4}}>
                 <Card>
                     <CardHeader title={"Backend and APIs"}/>
                     <CardContent>
@@ -39,7 +39,7 @@ export default function SkillsPageComponent(){
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid size={4}>
+            <Grid size={{xs:12,sm:4}}>
                 <Card>
                     <CardHeader title={"Tools and Practices"}/>
                     <CardContent>

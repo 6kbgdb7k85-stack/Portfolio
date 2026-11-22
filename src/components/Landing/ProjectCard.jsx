@@ -41,14 +41,16 @@ export default function ProjectCard({ project }) {
       >
         <CardHeader title={name} sx={{ pb: ".5rem", pt: ".5rem" }} />
         <CardContent sx={{ pt: ".5rem", flexGrow: 1 }}>
-          <Typography variant="body1">{description}</Typography>
-          {demoCreds && (
-            <Typography variant="body2" sx={{ textIndent: "2rem" }}>
-              You can create an account or use the demo account provided in the
-              footer.
-            </Typography>
-          )}
-          <Typography variant="h6" align="center">
+          <Typography variant="body1">
+            {description}{" "}
+            {demoCreds &&
+              "You can create an account or use the demo account provided below."}
+          </Typography>
+          <Typography
+            variant="h6"
+            align="center"
+            sx={{ mb: ".5rem", mt: ".5rem" }}
+          >
             Stack
           </Typography>
           <Grid container>
