@@ -5,10 +5,9 @@ import ProjectCard from "./ProjectCard";
 export default function Projects() {
   return (
     <>
-      <Typography variant="h3" sx={{textAlign:"center", mb:"1rem"}}>Portfolio</Typography>
       <Grid container spacing={1}>
         {PROJECTS.map((project) => (
-          <Grid key={`${project.name}-card`} size={4}>
+          <Grid key={`${project.name}-card`} size={{xs:12,md:4}}>
             <ProjectCard project={project} />
           </Grid>
         ))}

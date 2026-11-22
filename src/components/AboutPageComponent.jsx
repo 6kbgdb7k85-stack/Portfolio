@@ -3,9 +3,6 @@ import { Stack, Typography } from "@mui/material";
 export default function AboutPage() {
   return (
     <>
-      <Typography variant="h3" sx={{ textAlign: "center", mb:"1rem" }}>
-        About
-      </Typography>
       <Stack spacing={2} sx={{ textIndent: "2rem" }}>
         <Typography variant="body1" component="p">
           Before I could talk, I learned how to make a computer respond to my
