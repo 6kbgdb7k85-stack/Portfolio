@@ -4,7 +4,7 @@ import { SKILL_LIST } from "../../common/constants";
 export default function ExpertiseCard() {
   return (
     <Card>
-      <CardHeader title="Skills" />
+      <CardHeader title="Key Skills" />
       <CardContent sx={{padding:"8px !important"}}>
         <Grid container spacing={1}>
           {SKILL_LIST.map((skill) => (
