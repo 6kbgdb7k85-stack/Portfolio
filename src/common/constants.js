@@ -65,7 +65,7 @@ export const PROJECTS = [
     ],
     link: "https://global-cookbook.onrender.com/",
     github: "https://github.com/6kbgdb7k85-stack/Global-Cookbook",
-    demoCreds: { username: "demo@demo.com", password: "demopass1234!@A" },
+    demoCreds: { username: "demo@demo.com", password: "Demopass!1" },
     top: 3,
   },
 ];
